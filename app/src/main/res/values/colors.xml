@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#1B1A20</color>
+    <color name="xp_bar">#731944</color>
+    <color name="water">#389494</color>
+    <color name="food">#AD714F</color>
+    <color name="sleep">#603894</color>
+    <color name="exercise">#8D4F4F</color>
+    <color name="meds">#7D1818</color>
+    <color name="nick_background">#404040</color>
+</resources>
