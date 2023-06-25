@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".FuncoesExercise">
+
+    <ImageView
+        android:id="@+id/exercise_icon"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/exercise_icon" />
+
+    <ImageView
+        android:id="@+id/edit"
+        android:layout_width="227dp"
+        android:layout_height="119dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/exercise_icon"
+        app:srcCompat="@drawable/edit_quant" />
+
+
+
+
+
+    <ImageView
+        android:id="@+id/return_icon"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/return_icon" />
+
+    <TextView
+        android:id="@+id/quantidade"
+        android:textColor="@color/white"
+        android:layout_width="102dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/tempo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit" />
+
+    <TextView
+        android:id="@+id/tempo"
+        android:layout_width="102dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quantidade" />
+
+
+
+    <ImageView
+        android:id="@+id/editquant_btn"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tempo"
+        app:srcCompat="@drawable/editquant_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

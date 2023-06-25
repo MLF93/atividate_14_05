@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "303916193890",
+    "firebase_url": "https://conceitosfirebase-58307-default-rtdb.firebaseio.com",
+    "project_id": "conceitosfirebase-58307",
+    "storage_bucket": "conceitosfirebase-58307.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303916193890:android:fdbbb8776f3e152b50d93b",
+        "android_client_info": {
+          "package_name": "com.example.conceitosfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "303916193890-8u6fmafd44vlactla76nd22m1lftctda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKZl0ptV6jy4gDUbp5Vpv45dGLn6PXt48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "303916193890-8u6fmafd44vlactla76nd22m1lftctda.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303916193890:android:253f74bee636f9e750d93b",
+        "android_client_info": {
+          "package_name": "com.example.healthboost"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "303916193890-8u6fmafd44vlactla76nd22m1lftctda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKZl0ptV6jy4gDUbp5Vpv45dGLn6PXt48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "303916193890-8u6fmafd44vlactla76nd22m1lftctda.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

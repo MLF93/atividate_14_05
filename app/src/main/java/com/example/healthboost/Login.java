@@ -10,14 +10,17 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+
 public class Login extends AppCompatActivity {
 
     private EditText editTextUsername, editTextSenha;
     private Button buttonLogin;
 
-    private SharedPreferences sharedPreferences;
-
-    public static final String MyPreferences = "Arquivo";
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    CollectionReference usersCollectionRef = db.collection("users");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,32 +31,34 @@ public class Login extends AppCompatActivity {
         editTextSenha = findViewById(R.id.editTextSenha);
         buttonLogin = findViewById(R.id.buttonLogin);
 
-        sharedPreferences = getSharedPreferences(MyPreferences, 0);
+
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                String usuario = editTextUsername.getText().toString().trim();
-                String senha = editTextSenha.getText().toString().trim();
+            public void onClick(View view) {
+                String username = editTextUsername.getText().toString();
+                String password = editTextSenha.getText().toString();
+                login(username, password);
+            }
+        });
+    }
+    private void login(String username, String password) {
+        // Consultar o Firestore para verificar se o username e senha são válidos
+        Query query = usersCollectionRef
+                .whereEqualTo("username", username)
+                .whereEqualTo("password", password);
 
-                if (!usuario.isEmpty() && !senha.isEmpty()) {
-                    // Verifica se o usuário e a senha correspondem aos dados salvos
-                    String savedUsername = sharedPreferences.getString("usuario", "");
-                    String savedSenha = sharedPreferences.getString("senha", "");
-
-                    if (usuario.equals(savedUsername) && senha.equals(savedSenha)) {
-                        Toast.makeText(Login.this, "Login realizado com sucesso!", Toast.LENGTH_SHORT).show();
-                        // Continua com a lógica de login
-                        // ...
-                        Intent intent = new Intent(Login.this, MainMenu.class);
-                        startActivity(intent);
+        query.get()
+                .addOnSuccessListener(queryDocumentSnapshots -> {
+                    if (!queryDocumentSnapshots.isEmpty()) {
+                        // Credenciais de login corretas
+                        startActivity(new Intent(Login.this, MainMenu.class).putExtra("username", username));
                     } else {
                         Toast.makeText(Login.this, "Usuário ou senha inválidos!", Toast.LENGTH_SHORT).show();
                     }
-                } else {
+                })
+                .addOnFailureListener(e -> {
                     Toast.makeText(Login.this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+                });
     }
 }

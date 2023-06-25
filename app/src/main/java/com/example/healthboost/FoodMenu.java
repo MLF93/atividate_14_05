@@ -7,12 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class WaterMenuActivity extends AppCompatActivity {
+public class FoodMenu extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_water_menu);
+        setContentView(R.layout.activity_food_menu);
         ImageView imageViewReturn = findViewById(R.id.return_icon);
         imageViewReturn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -24,7 +24,7 @@ public class WaterMenuActivity extends AppCompatActivity {
         imageViewConfig.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(WaterMenuActivity.this, FuncoesWater.class);
+                Intent intent = new Intent(FoodMenu.this, FuncoesFood.class);
                 startActivity(intent);
             }
         });

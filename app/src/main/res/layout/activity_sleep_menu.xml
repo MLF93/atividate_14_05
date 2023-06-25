@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WaterMenuActivity"
-    android:background="@color/background">
+    android:background="@color/background"
+    tools:context=".SleepMenu">
+
 
     <ImageView
-        android:id="@+id/water_icon"
+        android:id="@+id/sleep_icon"
         android:layout_width="190dp"
         android:layout_height="190dp"
         android:layout_marginTop="150dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/water_icon" />
+        app:srcCompat="@drawable/sleep_icon" />
 
     <ImageView
         android:id="@+id/stats"
@@ -23,7 +24,7 @@
         android:layout_height="119dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/water_icon"
+        app:layout_constraintTop_toBottomOf="@id/sleep_icon"
         app:srcCompat="@drawable/estatistica_button" />
 
     <ImageView
@@ -45,6 +46,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/return_icon" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

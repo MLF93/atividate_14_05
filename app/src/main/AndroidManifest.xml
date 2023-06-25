@@ -13,6 +13,48 @@
         android:theme="@style/Theme.HealthBoost"
         tools:targetApi="31">
         <activity
+            android:name=".EditarExercise"
+            android:exported="false" />
+        <activity
+            android:name=".EditarFood"
+            android:exported="false" />
+        <activity
+            android:name=".EditarMeds"
+            android:exported="false" />
+        <activity
+            android:name=".EditarSleep"
+            android:exported="false" />
+        <activity
+            android:name=".EditarWater"
+            android:exported="false" />
+        <activity
+            android:name=".FuncoesMeds"
+            android:exported="false" />
+        <activity
+            android:name=".FuncoesExercise"
+            android:exported="false" />
+        <activity
+            android:name=".FuncoesSleep"
+            android:exported="false" />
+        <activity
+            android:name=".FuncoesFood"
+            android:exported="false" />
+        <activity
+            android:name=".FuncoesWater"
+            android:exported="false" />
+        <activity
+            android:name=".MedsMenu"
+            android:exported="false" />
+        <activity
+            android:name=".ExerciseMenu"
+            android:exported="false" />
+        <activity
+            android:name=".SleepMenu"
+            android:exported="false" />
+        <activity
+            android:name=".FoodMenu"
+            android:exported="false" />
+        <activity
             android:name=".Welcome"
             android:exported="false" />
         <activity

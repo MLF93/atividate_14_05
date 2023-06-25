@@ -171,10 +171,10 @@
             app:layout_constraintTop_toTopOf="@+id/exercise_bar_menu" />
 
         <ImageView
-            android:layout_width="82dp"
-            android:layout_height="41dp"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
             android:layout_marginStart="70dp"
-            android:src="@drawable/exercise_place_bar"
+            android:src="@drawable/meds_place_bar"
             app:layout_constraintBottom_toTopOf="@+id/meds_bar_menu"
             app:layout_constraintStart_toStartOf="parent" />
 
